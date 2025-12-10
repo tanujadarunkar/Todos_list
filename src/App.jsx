@@ -6,12 +6,14 @@ import { TodoForm, TodoItem } from './Components';
 function App() {
   const[todos, setTodos] = useState([]);
 
-  // for unique id we are giving Date.now() function
+  //            for unique id we are giving Date.now() function
   const addTodo = (todo) =>{
     // because we are working on objects we have to spread this if we are using string then dont need to spread it
     setTodos((prev) => [{id: Date.now(), ...todo} , ...prev])
   }
 
+  //     Testing Data
+  
   const updateTodo = (id, todo) =>{
     setTodos((prev) => prev.map((prevTodo) => (prevTodo.id === todo.id ? todo : prevTodo)))
   }

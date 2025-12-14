@@ -3,6 +3,7 @@ import { useTodo } from '../context/TodoContext';
 
 function TodoItem({todo}) {
     const [isTodoEditable, setIsTodoEditable] = useState(false);
+    const password = "bavs@32"
 
     const[todoMsg, setTodoMsg] = useState(todo.todo)
 

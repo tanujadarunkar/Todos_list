@@ -3,6 +3,7 @@ import { useTodo } from '../context/TodoContext';
 
 function TodoItem({todo}) {
     const [isTodoEditable, setIsTodoEditable] = useState(false);
+    // Added password 
     const password = "bavs@32"
 
     const[todoMsg, setTodoMsg] = useState(todo.todo)
@@ -32,7 +33,7 @@ function TodoItem({todo}) {
         <input type="text" 
         className={`border outline-none w-full bg-transparent rounded-lg ${isTodoEditable ? "border-black/10 px-2" : "border-transparent"}`}
         value={todoMsg}
-        onChange={(e) => setTodoMsg(e.target.value)}
+        onChange={(e)=>setTodoMsg(e.target.value)}
         readOnly={!isTodoEditable}
         />
         <button
